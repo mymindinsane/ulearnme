@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace strangers_cipher
@@ -29,29 +29,19 @@ namespace strangers_cipher
         private static string DecodeMessage(string[] lines)
         {
             var list = new List<string>();
-            for (int i = lines.Length - 1; i >= 0; i--)
+            for (int i = 0; i < lines.Length; i++)
             {
-                for (int j = lines[i].Split(' ').Length - 1; j >= 0; j--)
+                foreach (string word in lines[i].Split(" "))
                 {
-                    var word = lines[i].Split(" ")[j];
-                    if (word.Length > 0 && char.IsUpper(word[0]))
+                    if (lines[i] != "" && char.IsUpper(word[0])&&word.Length>=1)
                     {
                         list.Add(word);
                     }
                 }
             }
-
-
-            string message = "";
-            foreach (var word in list)
-            {
-                message += word + " ";
-            }
-
-            return message;
-
-
+            list.Reverse();
+            var output = string.Join(" ", list);
+            return output;
         }
-
     }
-}
+}    
