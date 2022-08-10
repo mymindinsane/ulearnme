@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace even_array
 {
@@ -6,13 +6,14 @@ namespace even_array
     {
         static void Main(string[] args)
         {
-            GetFirstEvenNumbers(5);
+            var result = string.Join(",", GetFirstEvenNumbers(5));
+            Console.WriteLine(result);
         }
         
         public static int[] GetFirstEvenNumbers(int amount)
         {
             int[] array = new int[amount];
-            for (int i = 0; i < array.Length+1; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 array[i] = (i+1) * 2;
             }
