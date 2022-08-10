@@ -6,7 +6,7 @@ namespace even_array
     {
         static void Main(string[] args)
         {
-            
+            GetFirstEvenNumbers(5);
         }
         
         public static int[] GetFirstEvenNumbers(int amount)
