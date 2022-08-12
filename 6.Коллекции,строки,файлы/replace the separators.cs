@@ -6,7 +6,7 @@ namespace splitAndJoin
     {
         static string citiesPopulation()
         {
-            string[] message =
+            string[] data =
             {
                 " Страна Население Дата % ",
                 " Китай: 1405023000; 24.08.2020; 17.99% ",
@@ -29,7 +29,7 @@ namespace splitAndJoin
                 " Турция - 83154997 1.01.2020 1.06% ",
                 " Германия - 83149300 1.10.2019 1.06% "
             };
-            return string.Join("", message);
+            return string.Join("", data);
         }
 
         public static void Main(string[] args)
