@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace stranger_again
@@ -19,7 +19,19 @@ namespace stranger_again
 
         public string ApplyCommands(string[] commands)
         {
-            var builder = new StringBuilder();
-        }
+           var builder = new StringBuilder();
+           for (int i; i < commands.Length; i++)
+           {
+               
+           }
+           
+           
+           
+           
+           
+           
+           
+           
+        } 
     }
 }
