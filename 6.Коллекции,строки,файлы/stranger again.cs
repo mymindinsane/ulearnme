@@ -26,7 +26,11 @@ namespace stranger_again
                if (commands[i].Contains("push"))
                    builder.Append(commands[i].Substring(5));
                else if (commands[i].Contains("pop"))
-                   builder.Remove(commands[i].Substring(4));
+               {
+                   int pop =Convert.ToInt32(commands[i].Substring(4));
+                   builder.Remove(builder.Length - pop);
+               }
+                   
            }
 
            return builder.ToString();
