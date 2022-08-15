@@ -1,5 +1,4 @@
 using System;
-using System.Net.Mime;
 using System.Text;
 
 namespace stranger_again
@@ -21,14 +20,16 @@ namespace stranger_again
         public static string ApplyCommands(string[] commands)
         {
            var builder = new StringBuilder();
-           for (int i; i < commands.Length; i++)
+           for (int i=0; i < commands.Length; i++)
            {
                if (commands[i].Contains("push"))
+               {
                    builder.Append(commands[i].Substring(5));
+               }
                else if (commands[i].Contains("pop"))
                {
                    int pop =Convert.ToInt32(commands[i].Substring(4));
-                   builder.Remove(builder.Length - pop);
+                   builder.Remove(builder.Length - pop, pop);
                }
                    
            }
