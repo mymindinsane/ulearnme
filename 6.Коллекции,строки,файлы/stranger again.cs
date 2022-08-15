@@ -1,4 +1,5 @@
 using System;
+using System.Net.Mime;
 using System.Text;
 
 namespace stranger_again
@@ -14,24 +15,21 @@ namespace stranger_again
                 "push 1234567890",
                 "pop 26" };
 
-            Console.WriteLine($"\"{ApplyCommands(commands)}\"");
+            Console.WriteLine(ApplyCommands(commands));
         }
 
-        public string ApplyCommands(string[] commands)
+        public static string ApplyCommands(string[] commands)
         {
            var builder = new StringBuilder();
            for (int i; i < commands.Length; i++)
            {
-               
+               if (commands[i].Contains("push"))
+                   builder.Append(commands[i].Substring(5));
+               else if (commands[i].Contains("pop"))
+                   builder.Remove(commands[i].Substring(4));
            }
-           
-           
-           
-           
-           
-           
-           
-           
+
+           return builder.ToString();
         } 
     }
 }
