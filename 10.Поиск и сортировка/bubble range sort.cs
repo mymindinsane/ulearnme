@@ -12,7 +12,7 @@ namespace Bubble_range_sort
         }
         public static int[] BubbleSortRange(int[] array, int left, int right)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length-1; i++)
             for (int j = left; j < right; j++)
                 if (array[j] > array[j + 1])
                 {
