@@ -7,7 +7,7 @@ namespace Creating_Extension_Methods
         public static void Main()
         {
             var arg1 = "100500";
-            Console.Write(arg1.ToInt() + "42".ToInt()); // 100542
+            Console.Write(arg1.ToInt() + "42".ToInt()); 
         }
 
     }
